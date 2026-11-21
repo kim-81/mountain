@@ -7,6 +7,7 @@ import { execFile } from 'node:child_process';
 import { openDatabase } from '../server/database.mjs';
 import { createAPI } from '../server/api.mjs';
 import { serverConfig } from '../server/config.mjs';
+import { requestHostAllowed } from '../server/request-host.mjs';
 
 const root = fileURLToPath(new URL('../web/', import.meta.url));
 const config = serverConfig();
@@ -17,9 +18,7 @@ const handleAPI = createAPI(database, config);
 const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml', '.webmanifest': 'application/manifest+json', '.json': 'application/json; charset=utf-8', '.md': 'text/markdown; charset=utf-8' };
 
 const server = http.createServer(async (request, response) => {
-  const allowedHosts = [`127.0.0.1:${request.socket.localPort}`, `localhost:${request.socket.localPort}`];
-  if (config.publicOrigin) allowedHosts.push(new URL(config.publicOrigin).host);
-  if (!allowedHosts.includes(request.headers.host)) { response.writeHead(403); response.end('Host not allowed'); return; }
+  if (!requestHostAllowed(request, config)) { response.writeHead(403); response.end('Host not allowed'); return; }
   if (await handleAPI(request, response)) return;
   try {
     if (!['GET', 'HEAD'].includes(request.method)) { response.writeHead(405); response.end(); return; }
