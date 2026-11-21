@@ -444,8 +444,8 @@ function uid() {
 return {normalizeState,readStore,state,persist,uid};
 })();
 __modules["server-config.js"]=(()=>{
-// scripts/configure-server.mjs로 설정합니다. 빈 값이면 기기 저장 모드입니다.
-const serverOrigin = '';
+// 프로젝트의 지정 HTTPS 서버. 비밀 키를 넣지 마세요.
+const serverOrigin = "https://mountain-production-ae35ffea.up.railway.app";
 
 return {serverOrigin};
 })();

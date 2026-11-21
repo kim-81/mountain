@@ -49,7 +49,7 @@ try {
   assert.equal((await call(`plans/${id}`,'DELETE',{},users[0])).status,200);
 } finally {
   for (const user of users) {
-    const deleted = await call('account','DELETE',{password:user.password},user);
+    const deleted = await call('account','DELETE',{password:user.password,confirm:'탈퇴'},user);
     assert.equal(deleted.status,200,'검사 계정 정리 실패');
   }
 }
