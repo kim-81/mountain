@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {prepareServerPackage} from './lib/server-package.mjs';
+const project=new URL('../',import.meta.url),output=new URL('../outputs/',import.meta.url);
+await fs.mkdir(output,{recursive:true});
+const name='railway-server-'+new Date().toISOString().replace(/[:.]/g,'-');
+const destination=new URL(name+'/',output);
+const report=await prepareServerPackage(fileURLToPath(project),fileURLToPath(destination));
+await fs.writeFile(new URL(name+'-manifest.json',output),JSON.stringify({...report,createdAt:new Date().toISOString()},null,2));
+console.log(JSON.stringify({folder:fileURLToPath(destination),version:report.version,files:report.fileCount,bytes:report.totalBytes,uploaded:false},null,2));

@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-11-05T03:02:23.603Z",
+  "status": "android-tools-ready",
+  "action": "프로젝트 전용 도구 폴더에 개발 도구를 준비하고 Android 디버그 APK를 빌드",
+  "termsUrl": "https://developer.android.com/studio/terms",
+  "sdkLicenseId": "android-sdk-license",
+  "sdkLicenseSHA256": "1f8729233617b193fd619213792ae16a41b95d2bbbf525dfe66998252ba68b16",
+  "packages": [
+    {
+      "package": "platforms;android-35",
+      "revision": 20000,
+      "description": "Android SDK Platform 35",
+      "license": "android-sdk-license",
+      "url": "https://dl.google.com/android/repository/platform-35_r02.zip",
+      "bytes": 64273788,
+      "checksum": "0bb560a90a7a2cbd0dd8348224d518b638fe7949"
+    },
+    {
+      "package": "build-tools;35.0.0",
+      "revision": 350000,
+      "description": "Android SDK Build-Tools 35",
+      "license": "android-sdk-license",
+      "url": "https://dl.google.com/android/repository/build-tools_r35_windows.zip",
+      "bytes": 59878107,
+      "checksum": "af059bb67cf7786f45ee0db85e2d24985df1b4b6"
+    },
+    {
+      "package": "cmdline-tools;12.0",
+      "revision": 120000,
+      "description": "Android SDK Command-line Tools",
+      "license": "android-sdk-license",
+      "url": "https://dl.google.com/android/repository/commandlinetools-win-11076708_latest.zip",
+      "bytes": 153583359,
+      "checksum": "3d2917302740f476999a091bc5558837c7a863c5"
+    },
+    {
+      "package": "platform-tools",
+      "revision": 370001,
+      "description": "Android SDK Platform-Tools",
+      "license": "android-sdk-license",
+      "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-win.zip",
+      "bytes": 8044989,
+      "checksum": "e03e78b1d80b396f1c3358e31251cb31740e1110"
+    }
+  ],
+  "jdk": {
+    "version": "17.0.21+9",
+    "url": "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.21%2B9/OpenJDK17U-jdk_x64_windows_hotspot_17.0.21_9.zip",
+    "sha256": "98518ecf554465057ee5509462631deeee374bc368c12a411d225cd29381f84b",
+    "bytes": 191117380
+  },
+  "downloadBytes": 476897623,
+  "notes": [
+    "SDK 약관 사용자 동의 확인 및 필수 패키지 설치 완료. APK 빌드는 다음 단계입니다."
+  ],
+  "approval": {
+    "date": "2026-11-05",
+    "answer": "약관에 동의하고 빌드 진행",
+    "scope": "JDK 17·Android SDK 준비, 해당 SDK 약관 동의 및 Android 디버그 APK 빌드"
+  }
+}

@@ -1,0 +1,20 @@
+node_modules/
+.local-data/
+map-source/
+.build-tools/
+outputs/*.apk
+.DS_Store
+.gradle/
+local.properties
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# 공개 저장소에는 검증한 설치 파일과 보고서만 포함합니다.
+.ui-test-data/
+.railway/
+outputs/*
+!outputs/sangil-ttara-0.8.6-debug.apk
+!outputs/sangil-ttara-0.8.6-debug.apk.sha256
+!outputs/android-build-report-0.8.6.json

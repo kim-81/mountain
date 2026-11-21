@@ -1,0 +1,264 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-05T02:45:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "relation",
+      "id": 11361878,
+      "tags": {
+        "fixme": "Should be splitted to courses 1, 2 and 3 according to new 21-courses splitting scheme, started in 04.2024",
+        "from": "도봉산역",
+        "name": "서울둘레길 1코스 수락-불암산코스",
+        "name:en": "[Seoul Trail] Courses 1, 2, 3",
+        "name:ko": "서울둘레길 1코스 수락-불암산코스",
+        "network": "lwn",
+        "operator": "서울시",
+        "route": "hiking",
+        "to": "철쭉동산",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17486304,
+      "tags": {
+        "name": "[서울둘레길] 7코스 / 일자산 코스",
+        "name:en": "[Seoul Trail] Course 7 / Iljasan Course",
+        "name:ko": "[서울둘레길] 7코스 / 일자산 코스",
+        "network": "lwn",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17496414,
+      "tags": {
+        "name": "[서울둘레길] 5코스 / 아차산 코스",
+        "name:en": "[Seoul Trail] Course 5 / Achasan Mountain Course",
+        "name:ko": "[서울둘레길] 5코스 / 아차산 코스",
+        "network": "lwn",
+        "ref": "5",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17497635,
+      "tags": {
+        "name": "[서울둘레길] 8코스 / 장지 • 탄천 코스",
+        "name:en": "[Seoul Trail] Course 8 / Jangji • Tancheon Stream Course",
+        "name:ko": "[서울둘레길] 8코스 / 장지 • 탄천 코스",
+        "network": "lwn",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17500297,
+      "tags": {
+        "distance": "7.3 km",
+        "name": "[서울둘레길] 21코스 / 북한산 도봉코스",
+        "name:en": "[Seoul Trail] Course 21 / Bukhansan Dobong Course",
+        "name:ko": "[서울둘레길] 21코스 / 북한산 도봉코스",
+        "network": "lwn",
+        "ref": "21",
+        "roundtrip": "no",
+        "route": "hiking",
+        "survey:date": "2024-04-17",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17500325,
+      "tags": {
+        "name": "[서울둘레길] 20코스",
+        "name:en": "[Seoul Trail] Course 20",
+        "name:ko": "[서울둘레길] 20코스",
+        "network": "lwn",
+        "ref": "20",
+        "roundtrip": "no",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17505902,
+      "tags": {
+        "name": "[서울둘레길] 19코스",
+        "name:en": "[Seoul Trail] Course 19",
+        "name:ko": "[서울둘레길] 19코스",
+        "network": "lwn",
+        "ref": "19",
+        "roundtrip": "no",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17506000,
+      "tags": {
+        "name": "[서울둘레길] 17코스",
+        "name:en": "[Seoul Trail] Course 17",
+        "name:ko": "[서울둘레길] 17코스",
+        "network": "lwn",
+        "ref": "17",
+        "roundtrip": "no",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17506001,
+      "tags": {
+        "name": "[서울둘레길] 18코스",
+        "name:en": "[Seoul Trail] Course 18",
+        "name:ko": "[서울둘레길] 18코스",
+        "network": "lwn",
+        "ref": "18",
+        "roundtrip": "no",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17506050,
+      "tags": {
+        "name": "[서울둘레길] 16코스",
+        "name:en": "[Seoul Trail] Course 16",
+        "name:ko": "[서울둘레길] 16코스",
+        "network": "lwn",
+        "ref": "16",
+        "roundtrip": "no",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17506202,
+      "tags": {
+        "name": "[서울둘레길] 15코스",
+        "name:en": "[Seoul Trail] Course 15",
+        "name:ko": "[서울둘레길] 15코스",
+        "network": "lwn",
+        "ref": "15",
+        "roundtrip": "no",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17506639,
+      "tags": {
+        "name": "[서울둘레길] 6코스",
+        "name:en": "[Seoul Trail] Course 6",
+        "name:ko": "[서울둘레길] 6코스",
+        "network": "lwn",
+        "ref": "6",
+        "roundtrip": "no",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17536037,
+      "tags": {
+        "name": "[서울둘레길] 4코스",
+        "name:en": "[Seoul Trail] Course 4",
+        "name:ko": "[서울둘레길] 4코스",
+        "network": "lwn",
+        "ref": "4",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17536807,
+      "tags": {
+        "name": "[서울둘레길] 9코스",
+        "name:en": "[Seoul Trail] Course 9",
+        "name:ko": "[서울둘레길] 9코스",
+        "network": "lwn",
+        "ref": "9",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17538298,
+      "tags": {
+        "name": "[서울둘레길] 13코스",
+        "name:en": "[Seoul Trail] Course 13",
+        "name:ko": "[서울둘레길] 13코스",
+        "network": "lwn",
+        "ref": "13",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17538299,
+      "tags": {
+        "name": "[서울둘레길] 12코스",
+        "name:en": "[Seoul Trail] Course 12",
+        "name:ko": "[서울둘레길] 12코스",
+        "network": "lwn",
+        "ref": "12",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17538300,
+      "tags": {
+        "name": "[서울둘레길] 11코스",
+        "name:en": "[Seoul Trail] Course 11",
+        "name:ko": "[서울둘레길] 11코스",
+        "network": "lwn",
+        "ref": "11",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 17538301,
+      "tags": {
+        "name": "[서울둘레길] 10코스",
+        "name:en": "[Seoul Trail] Course 10",
+        "name:ko": "[서울둘레길] 10코스",
+        "network": "lwn",
+        "ref": "10",
+        "route": "hiking",
+        "type": "route"
+      }
+    },
+    {
+      "type": "relation",
+      "id": 21265843,
+      "tags": {
+        "name": "인왕산둘레길",
+        "route": "foot",
+        "type": "route"
+      }
+    }
+  ]
+}

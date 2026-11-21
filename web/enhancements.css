@@ -1,0 +1,67 @@
+/* v0.2: 원래 색상과 카드 구성을 유지하고, 상태와 상세 정보의 구분을 보완합니다. */
+.data-badge { display: block; width: fit-content; font-size: 9px; padding: 2px 7px; border-radius: 5px; margin-bottom: 8px; }
+.data-badge.verified { color: #49633d; background: #edf2df; }
+.data-badge.sample { color: #9a7748; background: #f6efdf; }
+.detail-tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--line); margin: 22px 0; }
+.detail-tabs button { padding: 12px 16px; font-weight: 600; font-size: 13px; border-bottom: 3px solid transparent; }
+.detail-tabs button.selected { color: var(--green); border-bottom-color: var(--green); }
+.source-checked { background: #edf2e2; color: #536c45; }
+.course-name { font-weight: 700; color: var(--ink); margin-top: 18px; }
+.course-facts { display: grid; grid-template-columns: 120px 1fr; gap: 12px; font-size: 12px; }
+.course-facts dt { color: #869278; }.course-facts dd { margin: 0; }
+.source-link { display: block; margin: 15px 0; font-size: 12px; text-decoration: underline; color: var(--green); }
+.waypoints { display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 0 0 0 18px; font-size: 12px; color: #758568; }
+.readiness { padding: 18px; background: #f1f3e7; border-radius: 12px; font-size: 13px; }
+.readiness progress { display: block; width: 100%; height: 8px; margin-top: 12px; accent-color: var(--green); }
+.checklist { margin: 20px 0; }.checklist .checkbox { margin: 12px 0; padding: 8px 0; }
+.map-empty { min-height: 280px; padding: 38px 20px; text-align: center; background: #eaf0e1; }
+.map-empty>span { font-size: 48px; color: #7e9469; }.map-empty h3 { margin: 6px 0; }
+.map-empty p,.map-empty small { font-size: 12px; color: #7a8970; }
+.geo-map { background: #eaf0e1; position: relative; margin-top: 16px; border-radius: 14px; overflow: hidden; }
+.map-panel .geo-map { border-radius: 0; margin-top: 0; }
+.geo-map svg { width: 100%; display: block; max-height: 420px; }
+.geo-map>small { display: block; padding: 0 18px 16px; font-size: 10px; color: #829275; }
+.map-legend { padding: 10px 18px; display: flex; gap: 20px; font-size: 11px; color: #607353; }
+.map-legend span:first-child { color: #b8754b; }.map-legend span:last-child { color: #3878bd; }
+.map-tools { padding: 0 22px 22px; }.recording .checkbox { font-size: 12px; }
+.recovery-banner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: #f3edda; border: 1px solid #e1d5b2; padding: 17px; border-radius: 15px; margin-bottom: 22px; }
+.recovery-banner b { margin-right: auto; font-size: 13px; }.deviation-status { font-size: 12px; color: #a06b42; min-height: 20px; }
+.form-error { color: #a64c40; font-size: 12px; }.plan-card small { display: block; margin-bottom: 13px; color: #8f9b81; }
+@media(max-width:700px) {
+  .avatar,.favorite,.close { min-width: 44px; min-height: 44px; }
+  .chip { min-height: 44px; font-size: 11px; }
+  .primary,.outline { min-height: 46px; }
+  .district { font-size: 12px; }.card-body p { font-size: 13px; }
+  .route-stats { font-size: 13px; }.bottom-nav .nav-link { font-size: 11px; }
+  .detail-tabs button { flex: 1; padding: 12px 6px; font-size: 12px; }
+  .course-facts { grid-template-columns: 90px 1fr; gap: 10px; }
+  .recovery-banner .primary,.recovery-banner .outline { flex: 1; font-size: 12px; }
+  .map-empty { min-height: 270px; }.geo-map svg { min-height: 240px; }
+  .map-legend { gap: 12px; font-size: 10px; }.recording .checkbox input { flex-shrink: 0; }
+  .data-badge { font-size: 10px; }
+}
+
+.account-actions { display: grid; gap: 12px; margin-top: 22px; }
+
+.record-tools { display: flex; flex-wrap: wrap; gap: 12px; }
+.record .small-link { min-height: 44px; }
+
+button.connection { border: 0; background: transparent; cursor: pointer; min-height: 44px; }
+
+.weather-heading { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.weather-heading h3 { margin:0; }
+.weather-now { display:grid; gap:10px; margin:20px 0; }
+.weather-now b { font-size:28px; }
+.weather-days { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+.weather-days > div { display:grid; gap:8px; padding:14px 10px; background:#fff; border-radius:12px; font-size:12px; }
+@media(max-width:420px) { .weather-days { grid-template-columns:1fr; } .weather-days > div { grid-template-columns:1fr 1fr; } }
+
+.facility-item { border-bottom:1px solid #e3e5da; padding:20px 0; display:grid; grid-template-columns:1fr auto; gap:16px; }
+.facility-item h4 { margin:10px 0; font-size:17px; }
+.facility-item p,.source-note { font-size:12px; line-height:1.8; }
+.facility-links { display:flex; flex-direction:column; gap:10px; justify-content:center; }
+.facility-controls { margin:20px 0; }
+.support-notes { padding-left:20px; font-size:13px; line-height:1.9; }
+@media(max-width:700px) { .facility-item { grid-template-columns:1fr; } .facility-links { flex-direction:row; flex-wrap:wrap; gap:18px; } .facility-filters { gap:6px; } .facility-filters .chip { padding:10px 12px; } }
+
+#photo-preview { display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; } .photo-preview-item { display:grid; gap:8px; max-width:140px; } .photo-preview-item img { width:120px; height:100px; object-fit:cover; border-radius:10px; }

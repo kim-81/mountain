@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#354b35"><meta name="description" content="나에게 맞는 산을 발견하고 산행을 준비하세요. 산길따라 초기 개발 버전.">
+  <title>산길따라 · 나에게 맞는 산행</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="enhancements.css"><link rel="stylesheet" href="map.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar"><a class="brand" href="#home"><img src="assets/mark.svg" alt=""><span>산길따라<small>SANGIL TTARA</small></span></a><p class="side-label">나의 다음 산행</p><nav aria-label="주 메뉴" id="side-nav"></nav><div class="side-bottom"><span class="tag">SEOUL COLLECTION</span><p>도시를 잠시 벗어나<br>나만의 속도로 걸어요.</p><small>초기 개발 · 기기 검증 전</small></div></aside>
+    <div class="workspace"><header class="topbar"><a class="mobile-brand" href="#home">⌁ 산길따라</a><span class="breadcrumb">EXPLORE / <b>서울의 산</b></span><div class="top-actions"><button class="connection" id="connection" data-action="server-status" aria-label="서버 연결 상태 확인">확인 중</button><button class="avatar" data-action="account" aria-label="계정">나</button></div></header>
+      <main id="main" tabindex="-1">
+        <section class="hero" aria-label="산길따라 시작 안내"><div class="hero-art"></div><div class="hero-content"><span class="eyebrow light">SANGIL TTARA</span><h1>산길따라</h1><p id="startup-message">앱 화면을 준비하고 있습니다.</p></div></section>
+        <section id="file-open-guide" class="panel" hidden>
+          <h2>미리보기로 실행해 주세요</h2>
+          <p>HTML을 직접 열면 브라우저가 앱 화면을 불러오는 JavaScript 모듈을 제한합니다.</p>
+          <p>프로젝트 폴더의 <strong>미리보기.cmd</strong>를 더블클릭하세요. 열린 실행 창을 유지하면 산 검색·지도·계정 화면을 이용할 수 있습니다.</p>
+          <p>서버를 실행한 뒤 <a href="http://127.0.0.1:4173/">산길따라 미리보기 열기 →</a></p>
+        </section>
+        <noscript><p>JavaScript를 허용하고 프로젝트 폴더의 미리보기.cmd로 실행해 주세요.</p></noscript>
+      </main><footer class="footer">산길따라 · 나만의 속도로 만나는 자연 <span>GPS 안내는 현장 검증 전입니다.</span></footer>
+    </div>
+  </div>
+  <nav id="bottom-nav" class="bottom-nav" aria-label="하단 메뉴"></nav>
+  <dialog id="dialog"><div id="dialog-body"></div></dialog><div id="toast" role="status" aria-live="polite"></div>
+  <script>
+    if (location.protocol === 'file:' && !window.AndroidTrail && !window.webkit?.messageHandlers?.trail) {
+      document.getElementById('startup-message').textContent = '파일을 직접 여셨습니다. 아래 실행 안내를 확인해 주세요.';
+      document.getElementById('file-open-guide').hidden = false;
+      document.getElementById('connection').textContent = '실행 안내';
+    }
+  </script>
+  <script src="js/native-bundle.js"></script>
+</body></html>

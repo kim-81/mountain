@@ -1,0 +1,22 @@
+/* 외부 타일/지도 SDK 없이 앱에 포함된 OSM 벡터 자료를 표시합니다. */
+.offline-map { background:#eef1e5; border-radius:14px; overflow:hidden; margin:17px 0; }
+.map-panel .offline-map { border-radius:0; margin:0; }
+.map-canvas { width:100%; touch-action:none; cursor:grab; user-select:none; outline-offset:-3px; }
+.map-canvas:active { cursor:grabbing; }
+.map-canvas svg { display:block; width:100%; height:auto; max-height:490px; }
+.map-toolbar-buttons { display:flex; gap:6px; align-items:center; padding:10px 12px; background:#f5f6ec; border-bottom:1px solid #dce3cf; }
+.map-toolbar-buttons button { border:1px solid #d8dfc8; border-radius:7px; background:white; min-height:37px; padding:4px 12px; font-size:11px; color:#4d6544; }
+.map-toolbar-buttons button:first-child,.map-toolbar-buttons button:nth-child(2) { font-size:20px; min-width:38px; padding:0; }
+.map-credit { padding:8px 14px; background:#f6f7ef; color:#708365; font-size:9px; line-height:1.7; }
+.map-credit a { text-decoration:underline; }.map-credit span { float:right; font-size:9px; }
+.map-provenance { display:block; padding:0 16px 14px; color:#7b8d6e; font-size:10px; }
+.route-source { padding:12px 14px; font-size:11px; border:1px solid #e0e6d2; border-radius:10px; color:#687d5b; background:#f5f7ef; margin:14px 0; }
+.route-source a { text-decoration:underline; }.route-source b { display:block; color:#425b3d; }
+.offline-storage-note { font-size:11px; color:#7b8d6e; line-height:1.8; }
+@media(max-width:700px) {
+  .map-toolbar-buttons button { min-height:44px; padding:5px 11px; }
+  .map-toolbar-buttons button:first-child,.map-toolbar-buttons button:nth-child(2) { min-width:44px; }
+  .map-credit span { float:none; display:block; }
+  .map-credit,.map-credit span { font-size:10px; }
+  .map-canvas svg { min-height:220px; }
+}
