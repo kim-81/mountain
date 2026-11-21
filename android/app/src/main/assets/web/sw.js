@@ -1,5 +1,5 @@
 // 앱 화면·서울 8개 산 주변 OSM 배경자료를 캐시합니다. 실시간 정보·등고선은 포함하지 않습니다.
-const CACHE='seoul-trail-v0.8.7';
+const CACHE='seoul-trail-v0.8.7-2';
 const FILES=['./','index.html','styles.css','enhancements.css','manifest.webmanifest','assets/mark.svg','assets/landscape.svg','js/app.js','js/core.js','js/store.js','js/data.js','js/catalog.js','js/navigation.js','js/route-map.js','js/api.js','js/server-config.js','js/review-client.js','js/photo-files.js','server-config.json','js/share-links.js','js/facility-database.js','js/facilities.js','js/course-support.js','map-data/seoul-facilities.json','js/weather-data.js','js/weather.js','js/official-notices-data.js','js/official-notices.js','js/record-files.js','map.css','js/map-database.js','js/map-catalog.js','js/map-geometry.js','js/offline-map.js','map-data/seoul-osm.json','map-data/README.md'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('seoul-trail-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));

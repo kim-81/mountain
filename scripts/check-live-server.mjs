@@ -39,12 +39,16 @@ try {
   assert.equal((await call(`plans/${id}`,'GET',undefined,users[0])).data.plan.responses.length,2);
   assert.equal((await call(`plans/${id}`,'DELETE',{},users[1])).status,403);
   checks.push('일정 생성·다른 계정 참가·타인 삭제 차단');
-  const review = await call('reviews','POST',{mountainId:'achasan',text:'자동 검사 예시 후기',rating:5,photos:[]},users[0]);
+  const photo='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a0z8AAAAASUVORK5CYII=';
+  const review = await call('reviews','POST',{mountainId:'achasan',text:'자동 검사 예시 후기',rating:5,photos:[photo]},users[0]);
   assert.equal(review.status,200);
   const reviewId = review.data.review.id;
   assert((await call('reviews')).data.reviews.some(item=>item.id === reviewId));
+  const image=await fetch(origin+review.data.review.photos[0],{signal:AbortSignal.timeout(20000)});
+  assert.equal(image.status,200); assert.equal(image.headers.get('content-type'),'image/png');
+  assert(Buffer.from(await image.arrayBuffer()).equals(Buffer.from(photo.split(',')[1],'base64')));
   assert.equal((await call(`reviews/${reviewId}`,'DELETE',{},users[1])).status,403);
-  checks.push('후기 공개 조회·타인 삭제 차단');
+  checks.push('후기·사진 업로드 및 공개 조회·타인 삭제 차단');
   assert.equal((await call(`reviews/${reviewId}`,'DELETE',{},users[0])).status,200);
   assert.equal((await call(`plans/${id}`,'DELETE',{},users[0])).status,200);
 } finally {
